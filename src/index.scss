@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.square {
+  width: 1.5em;
+  height: 1.5em;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  font-size: 4em;
+  line-height: 1.5em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+}
+
+.board {
+  margin: 3em auto 2em auto;
+}
+
+/* Remove borders around the edges to make a traditional, open tic-tac-toe board. */
+.row {
+  display: flex;
+
+  &:first-child .square {
+    border-top-style: none;
+  }
+
+  &:last-child .square {
+    border-bottom-style: none;
+  }
+
+  .square {
+    &:first-child {
+      border-left-style: none;
+    }
+    &:last-child {
+      border-right-style: none;
+    }
+  }
+}
+
+button {
+  font-size: 1.5em;
+}
